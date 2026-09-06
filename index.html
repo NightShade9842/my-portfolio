@@ -5,175 +5,527 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freduah Dominic Kwakye | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- ===================== NAVIGATION ===================== -->
     <nav>
         <div class="container">
-            <h1>FDK</h1>
-            <ul>
+            <div class="logo">
+                <span class="logo-text">FDK</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#robotics">Robotics</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===================== HERO SECTION ===================== -->
     <section id="hero">
         <div class="container">
-            <h2>Freduah Dominic Kwakye</h2>
-            <p class="subtitle">Software Developer | STEM 3 Engineer | AI Enthusiast</p>
-            <p>I build technology that solves real problems in Africa.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-code"></i> Software Developer
+                    </div>
+                    <h1>Hi, I'm <span class="highlight">Freduah Dominic</span></h1>
+                    <p class="hero-subtitle">STEM 3 Engineer | AI Enthusiast | Builder</p>
+                    <p class="hero-description">
+                        I build technology that solves real problems in Africa.
+                        From AI chatbots to voice-first commerce platforms.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Live Products</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Years Coding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-wrapper">
+                        <div class="profile-circle">
+                            <img src="images/profile.jpg" alt="Freduah Dominic" />
+                        </div>
+                        <div class="floating-badge badge-1">
+                            <i class="fas fa-robot"></i> AI
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fas fa-gamepad"></i> Games
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fas fa-globe"></i> Web
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===================== ABOUT SECTION ===================== -->
     <section id="about">
         <div class="container">
-            <h3>About Me</h3>
-            <p>
-                I am a passionate software developer with experience building AI-powered solutions,
-                web applications, games, and bots. I served as STEM 3 Engineer for my school's
-                robotics team, where I developed practical engineering and teamwork skills.
-            </p>
-            <p>
-                I believe in building technology that solves real problems for people in Africa.
-                My latest project, <strong>Duapa</strong>, is a voice-first AI store builder for
-                Ghanaian micro-sellers.
-            </p>
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2>Passionate About <span class="highlight">Building</span> Solutions</h2>
+                <p class="section-subtitle">Here's a little about who I am and what drives me</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a passionate software developer with experience building AI-powered solutions,
+                        web applications, games, and bots. I served as <strong>STEM 3 Engineer</strong> for my school's
+                        robotics team, where I developed practical engineering and teamwork skills.
+                    </p>
+                    <p>
+                        I believe in building technology that solves <strong>real problems</strong> for people in Africa.
+                        My latest project, <strong>Duapa</strong>, is a voice-first AI store builder for
+                        Ghanaian micro-sellers who have no digital presence.
+                    </p>
+                    <div class="about-skills">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">AI/NLP</span>
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/about-me.jpg" alt="About Me" />
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ===================== PROJECTS SECTION ===================== -->
     <section id="projects">
         <div class="container">
-            <h3>My Projects</h3>
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2>My <span class="highlight">Projects</span></h2>
+                <p class="section-subtitle">Double-click any project image to watch a demo video</p>
+            </div>
             <div class="project-grid">
 
-                <!-- Project 1: Duapa -->
+                <!-- PROJECT 1: DUAPA -->
                 <div class="project-card">
-                    <img src="images/duapa-screenshot.jpg" alt="Duapa Screenshot" />
-                    <h4>Duapa</h4>
-                    <p>Voice-first AI store builder & social commerce platform for Ghanaian micro-sellers.</p>
-                    <p><strong>Tech:</strong> Node.js, WhatsApp API, AI/NLP, React, MongoDB</p>
-                    <a href="[YOUR DUAPA LINK]" target="_blank">🔗 Live Demo</a>
-                    <a href="[YOUR GITHUB LINK]" target="_blank">📂 GitHub</a>
+                    <div class="project-media">
+                        <img src="images/duapa-screenshot.jpg" alt="Duapa Screenshot" class="project-img" />
+                        <video class="project-video" muted loop>
+                            <source src="videos/duapa-demo.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Double-click to play</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">Featured</div>
+                        <h3>Duapa</h3>
+                        <p class="project-desc">
+                            Voice-first AI store builder & social commerce platform for Ghanaian micro-sellers.
+                            Sellers create stores by talking to a WhatsApp assistant in local languages.
+                        </p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>WhatsApp API</span>
+                            <span>AI/NLP</span>
+                            <span>React</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Project 2: AI Chatbot -->
+                <!-- PROJECT 2: AI CHATBOT -->
                 <div class="project-card">
-                    <img src="images/chatbot-screenshot.jpg" alt="AI Chatbot Screenshot" />
-                    <h4>AI Chatbot Assistant</h4>
-                    <p>Intelligent chatbot built with Node.js with natural language processing.</p>
-                    <p><strong>Tech:</strong> Node.js, JavaScript, AI APIs</p>
-                    <a href="[LIVE LINK]" target="_blank">🔗 Live Demo</a>
-                    <a href="[GITHUB LINK]" target="_blank">📂 GitHub</a>
+                    <div class="project-media">
+                        <img src="images/chatbot-screenshot.jpg" alt="AI Chatbot" class="project-img" />
+                        <video class="project-video" muted loop>
+                            <source src="videos/chatbot-demo.mp4" type="video/mp4" />
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Double-click to play</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Chatbot Assistant</h3>
+                        <p class="project-desc">
+                            Intelligent chatbot with natural language processing, built with Node.js.
+                            Capable of handling conversations, answering questions, and automating tasks.
+                        </p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>JavaScript</span>
+                            <span>AI APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Project 3: Pokémon Gaming Bot -->
+                <!-- PROJECT 3: POKEMON GAMING BOT -->
                 <div class="project-card">
-                    <img src="images/pokemon-bot-screenshot.jpg" alt="Pokémon Bot Screenshot" />
-                    <h4>Pokémon Gaming Bot</h4>
-                    <p>Interactive gaming bot with Pokémon battles and anime card collection.</p>
-                    <p><strong>Tech:</strong> Node.js, JavaScript, Discord/Telegram API</p>
-                    <a href="[LIVE LINK]" target="_blank">🔗 Live Demo</a>
-                    <a href="[GITHUB LINK]" target="_blank">📂 GitHub</a>
+                    <div class="project-media">
+                        <img src="images/pokemon-bot-screenshot.jpg" alt="Pokémon Gaming Bot" class="project-img" />
+                        <video class="project-video" muted loop>
+                            <source src="videos/pokemon-bot-demo.mp4" type="video/mp4" />
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Double-click to play</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Pokémon Gaming Bot</h3>
+                        <p class="project-desc">
+                            Interactive gaming bot featuring Pokémon battles, card collection,
+                            and anime-themed gameplay for Discord and Telegram.
+                        </p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>Discord API</span>
+                            <span>Telegram API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Project 4: All-in-One Bot Website -->
+                <!-- PROJECT 4: ALL-IN-ONE BOT WEBSITE -->
                 <div class="project-card">
-                    <img src="images/bot-website-screenshot.jpg" alt="Bot Website Screenshot" />
-                    <h4>All-in-One Bot Website</h4>
-                    <p>Website showcasing AI Chatbot and Pokémon Gaming Bot in one place.</p>
-                    <p><strong>Tech:</strong> HTML, CSS, JavaScript, Node.js</p>
-                    <a href="[LIVE LINK]" target="_blank">🔗 Live Demo</a>
-                    <a href="[GITHUB LINK]" target="_blank">📂 GitHub</a>
+                    <div class="project-media">
+                        <img src="images/bot-website-screenshot.jpg" alt="Bot Website" class="project-img" />
+                        <video class="project-video" muted loop>
+                            <source src="videos/bot-website-demo.mp4" type="video/mp4" />
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Double-click to play</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>All-in-One Bot Website</h3>
+                        <p class="project-desc">
+                            Central hub showcasing the AI Chatbot and Pokémon Gaming Bot,
+                            allowing users to interact with both bots in one place.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Project 5: E-Commerce Website -->
+                <!-- PROJECT 5: E-COMMERCE WEBSITE -->
                 <div class="project-card">
-                    <img src="images/ecommerce-screenshot.jpg" alt="E-Commerce Screenshot" />
-                    <h4>E-Commerce Website</h4>
-                    <p>Full e-commerce platform with product listings, cart, and payment integration.</p>
-                    <p><strong>Tech:</strong> [Your Tech Stack]</p>
-                    <a href="[LIVE LINK]" target="_blank">🔗 Live Demo</a>
-                    <a href="[GITHUB LINK]" target="_blank">📂 GitHub</a>
+                    <div class="project-media">
+                        <img src="images/ecommerce-screenshot.jpg" alt="E-Commerce" class="project-img" />
+                        <video class="project-video" muted loop>
+                            <source src="videos/ecommerce-demo.mp4" type="video/mp4" />
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Double-click to play</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p class="project-desc">
+                            Full-featured e-commerce platform with product listings,
+                            shopping cart, payment gateway integration, and order tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Project 6: Unity Games -->
+                <!-- PROJECT 6: UNITY GAMES -->
                 <div class="project-card">
-                    <img src="images/unity-games-screenshot.jpg" alt="Unity Games Screenshot" />
-                    <h4>Unity Games</h4>
-                    <p>Currently developing games in Unity. Coming soon!</p>
-                    <p><strong>Tech:</strong> Unity, C#</p>
-                    <a href="#" target="_blank">🚀 In Progress</a>
+                    <div class="project-media">
+                        <img src="images/unity-games-screenshot.jpg" alt="Unity Games" class="project-img" />
+                        <video class="project-video" muted loop>
+                            <source src="videos/unity-games-demo.mp4" type="video/mp4" />
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Double-click to play</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge project-badge-coming">Coming Soon</div>
+                        <h3>Unity Games</h3>
+                        <p class="project-desc">
+                            Currently developing immersive games using Unity Engine and C#.
+                            Stay tuned for exciting releases!
+                        </p>
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>C#</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="status-text">🚀 In Development</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Robotics Section -->
+    <!-- ===================== ROBOTICS SECTION ===================== -->
     <section id="robotics">
         <div class="container">
-            <h3>Robotics Experience</h3>
-            <h4>STEM 3 Engineer - [Your School Name] Robotics Team</h4>
-            <ul>
-                <li>Designed and built robotic systems for competitions</li>
-                <li>Collaborated with team members on complex engineering projects</li>
-                <li>Applied engineering principles to real-world problems</li>
-            </ul>
-            <p><strong>Skills Developed:</strong> System design, Problem-solving, Team collaboration, Hardware-software integration</p>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h3>Education</h3>
-            <p><strong>WASSCE (2025)</strong></p>
-            <p>[Your Senior High School Name]</p>
-            <p>AMANIAMPONG SENIOR HIGH SCHOOL</p>
-            <table>
-                <tr><th>Subject</th><th>Grade</th></tr>
-                <tr><td>English Language</td><td>C6</td></tr>
-                <tr><td>Social Studies</td><td>C6</td></tr>
-                <tr><td>Physics</td><td>C6</td></tr>
-                <tr><td>General Agriculture</td><td>C4</td></tr>
-                <tr><td>Animal Husbandry</td><td>C4</td></tr>
-                <tr><td>Mathematics (Core)</td><td>D7</td></tr>
-                <tr><td>Integrated Science</td><td>D7</td></tr>
-                <tr><td>Chemistry</td><td>D7</td></tr>
-            </table>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h3>Contact Me</h3>
-            <p>📧 [Your Email]</p>
-            <p>📱 [Your Phone Number]</p>
-            <p>📍 Kumasi, Ghana</p>
-            <div class="social-links">
-                <a href="[YOUR GITHUB]" target="_blank">🐙 GitHub</a>
-                <a href="[YOUR LINKEDIN]" target="_blank">🔗 LinkedIn</a>
-                <a href="[YOUR TWITTER]" target="_blank">🐦 Twitter</a>
+            <div class="section-header">
+                <span class="section-tag">Robotics</span>
+                <h2>STEM <span class="highlight">Engineering</span> Experience</h2>
+            </div>
+            <div class="robotics-content">
+                <div class="robotics-info">
+                    <h3>STEM 3 Engineer</h3>
+                    <p><strong>[Your School Name] Robotics Team</strong></p>
+                    <ul class="robotics-list">
+                        <li><i class="fas fa-check-circle"></i> Designed and built robotic systems for competitions</li>
+                        <li><i class="fas fa-check-circle"></i> Collaborated with team members on complex engineering projects</li>
+                        <li><i class="fas fa-check-circle"></i> Applied engineering principles to real-world problems</li>
+                        <li><i class="fas fa-check-circle"></i> Led technical development and troubleshooting</li>
+                    </ul>
+                    <div class="robotics-skills">
+                        <h4>Skills Developed:</h4>
+                        <div class="skill-tags">
+                            <span>System Design</span>
+                            <span>Problem-Solving</span>
+                            <span>Team Collaboration</span>
+                            <span>Hardware-Integration</span>
+                            <span>Project Management</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="robotics-image">
+                    <img src="images/robotics-team.jpg" alt="Robotics Team" />
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ===================== EDUCATION SECTION ===================== -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Education</span>
+                <h2>Academic <span class="highlight">Background</span></h2>
+            </div>
+            <div class="education-content">
+                <div class="education-card">
+                    <h3>WASSCE 2025</h3>
+                    <p class="school-name">AMANIAMPONG SENIOR HIGH SCHOOL</p>
+                    <table class="grades-table">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Grade</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>English Language</td>
+                                <td>C6</td>
+                                <td><span class="status-badge status-credit">Credit</span></td>
+                            </tr>
+                            <tr>
+                                <td>Social Studies</td>
+                                <td>C6</td>
+                                <td><span class="status-badge status-credit">Credit</span></td>
+                            </tr>
+                            <tr>
+                                <td>Physics</td>
+                                <td>C6</td>
+                                <td><span class="status-badge status-credit">Credit</span></td>
+                            </tr>
+                            <tr>
+                                <td>General Agriculture</td>
+                                <td>C4</td>
+                                <td><span class="status-badge status-credit">Credit</span></td>
+                            </tr>
+                            <tr>
+                                <td>Animal Husbandry</td>
+                                <td>C4</td>
+                                <td><span class="status-badge status-credit">Credit</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mathematics (Core)</td>
+                                <td>D7</td>
+                                <td><span class="status-badge status-pass">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>Integrated Science</td>
+                                <td>D7</td>
+                                <td><span class="status-badge status-pass">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>Chemistry</td>
+                                <td>D7</td>
+                                <td><span class="status-badge status-pass">Pass</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="education-stats">
+                        <div class="edu-stat">
+                            <span class="edu-number">5</span>
+                            <span class="edu-label">Credits</span>
+                        </div>
+                        <div class="edu-stat">
+                            <span class="edu-number">3</span>
+                            <span class="edu-label">Passes</span>
+                        </div>
+                        <div class="edu-stat">
+                            <span class="edu-number">0</span>
+                            <span class="edu-label">Failures</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2>Let's <span class="highlight">Connect</span></h2>
+                <p class="section-subtitle">I'm always open to new opportunities and collaborations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>your.email@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+233 XX XXX XXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Kumasi, Ghana</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="#" class="social-btn" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" class="social-btn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="#" class="social-btn" target="_blank">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="#" class="social-btn" target="_blank">
+                        <i class="fab fa-youtube"></i> YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Fredusah Dominic Kwakye. Built with ❤️</p>
+            <p>&copy; 2025 Freduah Dominic Kwakye. Built with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </footer>
+
+    <!-- ===================== JAVASCRIPT ===================== -->
+    <script src="script.js"></script>
 </body>
 </html>
