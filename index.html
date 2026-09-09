@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Swiper CSS for Slideshow -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -143,22 +145,14 @@
             <div class="section-header">
                 <span class="section-tag">Portfolio</span>
                 <h2>My <span class="highlight">Projects</span></h2>
-                <p class="section-subtitle">Click any project image to view details & demo video</p>
+                <p class="section-subtitle">Click any project to view details, video & screenshots</p>
             </div>
             <div class="project-grid">
 
                 <!-- PROJECT 1: SABAODY AI -->
                 <div class="project-card" data-project="sabaody">
-                    <div class="project-media">
-                        <img src="images/sabaody-screenshot.jpg" alt="SABAODY AI" class="project-img" />
-                        <video class="project-video" muted loop>
-                            <source src="videos/sabaody-demo.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>Double-click to play</span>
-                        </div>
+                    <div class="project-logo">
+                        <img src="images/sabaody-logo.png" alt="SABAODY AI" />
                     </div>
                     <div class="project-info">
                         <div class="project-badge">⭐ Featured</div>
@@ -174,29 +168,16 @@
                             <span>PWA</span>
                             <span>JavaScript</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://sabaody-ai.vercel.app/" class="btn-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="#" class="btn-link" target="_blank">
-                                <i class="fas fa-info-circle"></i> Learn More
-                            </a>
-                        </div>
+                        <button class="btn btn-primary view-project-btn" data-project="sabaody">
+                            <i class="fas fa-eye"></i> View Project
+                        </button>
                     </div>
                 </div>
 
-                <!-- PROJECT 2: SABAODY BOT (WhatsApp RPG) -->
+                <!-- PROJECT 2: SABAODY BOT -->
                 <div class="project-card" data-project="sabaodybot">
-                    <div class="project-media">
-                        <img src="images/sabaodybot-screenshot.jpg" alt="SABAODY Bot" class="project-img" />
-                        <video class="project-video" muted loop>
-                            <source src="videos/sabaodybot-demo.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>Double-click to play</span>
-                        </div>
+                    <div class="project-logo">
+                        <img src="images/sabaodybot-logo.png" alt="SABAODY Bot" />
                     </div>
                     <div class="project-info">
                         <div class="project-badge">⭐ Featured</div>
@@ -211,29 +192,16 @@
                             <span>Game Logic</span>
                             <span>Economy System</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://chat.whatsapp.com/LMlqn66KcQgG2LbDDTNFKF" class="btn-link" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Join the Game
-                            </a>
-                            <a href="#" class="btn-link" target="_blank">
-                                <i class="fas fa-info-circle"></i> Learn More
-                            </a>
-                        </div>
+                        <button class="btn btn-primary view-project-btn" data-project="sabaodybot">
+                            <i class="fas fa-eye"></i> View Project
+                        </button>
                     </div>
                 </div>
 
                 <!-- PROJECT 3: DUAPA -->
                 <div class="project-card" data-project="duapa">
-                    <div class="project-media">
-                        <img src="images/duapa-screenshot.jpg" alt="Duapa" class="project-img" />
-                        <video class="project-video" muted loop>
-                            <source src="videos/duapa-demo.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>Double-click to play</span>
-                        </div>
+                    <div class="project-logo">
+                        <img src="images/duapa-logo.png" alt="Duapa" />
                     </div>
                     <div class="project-info">
                         <div class="project-badge">⭐ Featured</div>
@@ -249,29 +217,16 @@
                             <span>React</span>
                             <span>MongoDB</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="#" class="btn-link" target="_blank">
-                                <i class="fas fa-info-circle"></i> Learn More
-                            </a>
-                        </div>
+                        <button class="btn btn-primary view-project-btn" data-project="duapa">
+                            <i class="fas fa-eye"></i> View Project
+                        </button>
                     </div>
                 </div>
 
                 <!-- PROJECT 4: DUSKFALL -->
                 <div class="project-card" data-project="duskfall">
-                    <div class="project-media">
-                        <img src="images/duskfall-screenshot.jpg" alt="Duskfall" class="project-img" />
-                        <video class="project-video" muted loop>
-                            <source src="videos/duskfall-demo.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>Double-click to play</span>
-                        </div>
+                    <div class="project-logo">
+                        <img src="images/duskfall-logo.png" alt="Duskfall" />
                     </div>
                     <div class="project-info">
                         <div class="project-badge project-badge-coming">🚀 In Development</div>
@@ -286,9 +241,9 @@
                             <span>GitHub Actions</span>
                             <span>3D Modeling</span>
                         </div>
-                        <div class="project-links">
-                            <span class="status-text">🚀 In Development</span>
-                        </div>
+                        <button class="btn btn-primary view-project-btn" data-project="duskfall">
+                            <i class="fas fa-eye"></i> View Project
+                        </button>
                     </div>
                 </div>
 
@@ -400,6 +355,7 @@
                 <i class="fas fa-times"></i>
             </button>
             <div class="modal-body">
+
                 <!-- Video Section -->
                 <div class="modal-video-container">
                     <video id="modalVideo" controls poster="images/placeholder-poster.jpg">
@@ -407,6 +363,19 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
+
+                <!-- Slideshow Section -->
+                <div class="modal-slideshow">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper" id="slideshowWrapper">
+                            <!-- Slides will be inserted by JavaScript -->
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
                 <!-- Project Details -->
                 <div class="modal-details">
                     <div class="modal-header">
@@ -430,11 +399,13 @@
                         </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
     <!-- ===================== JAVASCRIPT ===================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 
 </body>
