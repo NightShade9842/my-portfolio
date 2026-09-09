@@ -32,52 +32,9 @@ window.addEventListener('scroll', () => {
 });
 
 // ========================================
-// PROJECT VIDEO - DOUBLE CLICK FEATURE
+// PROJECT DATA
 // ========================================
 
-document.querySelectorAll('.project-media').forEach(media => {
-    const img = media.querySelector('.project-img');
-    const video = media.querySelector('.project-video');
-    const overlay = media.querySelector('.video-overlay');
-
-    // Double click to play video
-    media.addEventListener('dblclick', (e) => {
-        e.stopPropagation(); // Prevent modal from opening
-        if (video && video.querySelector('source')) {
-            // Hide image, show video
-            if (img) img.classList.add('hidden');
-            video.classList.add('active');
-            video.play();
-            if (overlay) overlay.style.opacity = '0';
-
-            // When video ends, show image again
-            video.onended = () => {
-                video.classList.remove('active');
-                if (img) img.classList.remove('hidden');
-                if (overlay) overlay.style.opacity = '1';
-            };
-        }
-    });
-
-    // Hover effect for overlay
-    media.addEventListener('mouseenter', () => {
-        if (video && !video.classList.contains('active') && overlay) {
-            overlay.style.opacity = '1';
-        }
-    });
-
-    media.addEventListener('mouseleave', () => {
-        if (video && !video.classList.contains('active') && overlay) {
-            overlay.style.opacity = '0';
-        }
-    });
-});
-
-// ========================================
-// PROJECT MODAL - CLICK TO OPEN
-// ========================================
-
-// Project Data
 const projectsData = {
     sabaody: {
         title: "SABAODY AI - Pirate-Themed AI Web App",
@@ -98,7 +55,12 @@ const projectsData = {
         video: "videos/sabaody-demo.mp4",
         liveLink: "https://sabaody-ai.vercel.app/",
         gitLink: "https://github.com/NightShade9842/sabaody-showcase",
-        poster: "images/sabaody-screenshot.jpg"
+        poster: "images/sabaody-screenshot.jpg",
+        screenshots: [
+            "images/sabaody-ss1.jpg",
+            "images/sabaody-ss2.jpg",
+            "images/sabaody-ss3.jpg"
+        ]
     },
     sabaodybot: {
         title: "SABAODY Bot - Anime RPG on WhatsApp",
@@ -128,7 +90,12 @@ const projectsData = {
         video: "videos/sabaodybot-demo.mp4",
         liveLink: "https://chat.whatsapp.com/LMlqn66KcQgG2LbDDTNFKF",
         gitLink: "https://github.com/NightShade9842/sabaodybot-showcase",
-        poster: "images/sabaodybot-screenshot.jpg"
+        poster: "images/sabaodybot-screenshot.jpg",
+        screenshots: [
+            "images/sabaodybot-ss1.jpg",
+            "images/sabaodybot-ss2.jpg",
+            "images/sabaodybot-ss3.jpg"
+        ]
     },
     duapa: {
         title: "Duapa - Voice-First AI Store Builder",
@@ -150,7 +117,12 @@ const projectsData = {
         video: "videos/duapa-demo.mp4",
         liveLink: "#",
         gitLink: "https://github.com/NightShade9842/duapa-showcase",
-        poster: "images/duapa-screenshot.jpg"
+        poster: "images/duapa-screenshot.jpg",
+        screenshots: [
+            "images/duapa-ss1.jpg",
+            "images/duapa-ss2.jpg",
+            "images/duapa-ss3.jpg"
+        ]
     },
     duskfall: {
         title: "Duskfall - 3D Zombie Survival Game",
@@ -177,11 +149,19 @@ const projectsData = {
         video: "videos/duskfall-demo.mp4",
         liveLink: "#",
         gitLink: "https://github.com/NightShade9842/duskfall",
-        poster: "images/duskfall-screenshot.jpg"
+        poster: "images/duskfall-screenshot.jpg",
+        screenshots: [
+            "images/duskfall-ss1.jpg",
+            "images/duskfall-ss2.jpg",
+            "images/duskfall-ss3.jpg"
+        ]
     }
 };
 
-// Get modal elements
+// ========================================
+// PROJECT MODAL
+// ========================================
+
 const modal = document.getElementById('projectModal');
 const closeBtn = document.getElementById('closeModal');
 const modalVideo = document.getElementById('modalVideo');
@@ -191,8 +171,9 @@ const modalDescription = document.getElementById('modalDescription');
 const modalTech = document.getElementById('modalTech');
 const modalLiveLink = document.getElementById('modalLiveLink');
 const modalGitLink = document.getElementById('modalGitLink');
+const slideshowWrapper = document.getElementById('slideshowWrapper');
+let swiperInstance = null;
 
-// Function to open modal with project data
 function openModal(projectKey) {
     const project = projectsData[projectKey];
     if (!project) return;
@@ -213,7 +194,7 @@ function openModal(projectKey) {
     // Set badge
     modalBadge.textContent = project.badge;
 
-    // Set description (with HTML support)
+    // Set description
     modalDescription.innerHTML = project.description;
 
     // Set tech stack
@@ -234,57 +215,87 @@ function openModal(projectKey) {
         modalGitLink.style.display = 'none';
     }
 
+    // Set slideshow
+    slideshowWrapper.innerHTML = '';
+    if (project.screenshots && project.screenshots.length > 0) {
+        project.screenshots.forEach(src => {
+            const slide = document.createElement('div');
+            slide.className = 'swiper-slide';
+            slide.innerHTML = `<img src="${src}" alt="Screenshot" />`;
+            slideshowWrapper.appendChild(slide);
+        });
+    }
+
     // Show modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Reset video if it was playing
+    // Reset video
     modalVideo.pause();
     modalVideo.currentTime = 0;
+
+    // Initialize Swiper after a short delay
+    setTimeout(() => {
+        if (swiperInstance) {
+            swiperInstance.destroy(true, true);
+        }
+        swiperInstance = new Swiper('.mySwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+        });
+    }, 300);
 }
 
-// Function to close modal
 function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
     modalVideo.pause();
     modalVideo.currentTime = 0;
+    if (swiperInstance) {
+        swiperInstance.destroy(true, true);
+        swiperInstance = null;
+    }
 }
 
-// Click event for project cards
-document.querySelectorAll('.project-card').forEach((card) => {
-    // Get project key from data attribute
-    const projectKey = card.dataset.project;
+// ========================================
+// EVENT LISTENERS
+// ========================================
 
-    // Click on the card opens modal
-    card.addEventListener('click', function(e) {
-        // Don't trigger if clicking on links
-        if (e.target.closest('.btn-link') || e.target.closest('a')) return;
-        // Don't trigger if it's a double-click on media (video toggle)
-        if (e.target.closest('.project-media')) {
-            return;
-        }
+// View Project buttons
+document.querySelectorAll('.view-project-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const projectKey = this.dataset.project;
         if (projectKey && projectsData[projectKey]) {
             openModal(projectKey);
         }
     });
-
-    // Click on media area opens modal (single click)
-    const media = card.querySelector('.project-media');
-    if (media) {
-        media.addEventListener('click', function(e) {
-            // Don't trigger if it's a double-click (already handled)
-            if (e.detail === 2) return;
-            // Don't trigger if clicking on video overlay
-            if (e.target.closest('.video-overlay')) return;
-            if (projectKey && projectsData[projectKey]) {
-                openModal(projectKey);
-            }
-        });
-    }
 });
 
-// Close modal events
+// Click on card (anywhere) opens modal
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+        // Don't trigger if clicking on the button (already handled)
+        if (e.target.closest('.view-project-btn')) return;
+        const projectKey = this.dataset.project;
+        if (projectKey && projectsData[projectKey]) {
+            openModal(projectKey);
+        }
+    });
+});
+
+// Close modal
 if (closeBtn) {
     closeBtn.addEventListener('click', closeModal);
 }
@@ -298,7 +309,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 // ========================================
-// SMOOTH SCROLL FOR NAV LINKS
+// SMOOTH SCROLL
 // ========================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -332,24 +343,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe project cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(card);
-});
-
-// Observe section headers
-document.querySelectorAll('.section-header').forEach(header => {
-    header.style.opacity = '0';
-    header.style.transform = 'translateY(20px)';
-    header.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(header);
-});
-
-// Observe robotics and about sections
-document.querySelectorAll('.robotics-content, .about-content').forEach(el => {
+document.querySelectorAll('.project-card, .section-header, .robotics-content, .about-content').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -357,16 +351,14 @@ document.querySelectorAll('.robotics-content, .about-content').forEach(el => {
 });
 
 // ========================================
-// TYPING ANIMATION FOR HERO
+// TYPING ANIMATION
 // ========================================
 
-// Simple typing effect for the subtitle
 const subtitle = document.querySelector('.hero-subtitle');
 if (subtitle) {
     const text = subtitle.textContent;
     subtitle.textContent = '';
     let index = 0;
-
     function typeText() {
         if (index < text.length) {
             subtitle.textContent += text.charAt(index);
@@ -374,8 +366,6 @@ if (subtitle) {
             setTimeout(typeText, 50);
         }
     }
-
-    // Start typing after a short delay
     setTimeout(typeText, 1000);
 }
 
@@ -395,17 +385,12 @@ console.log('  🚀 Duskfall - 3D Zombie Survival Game');
 
 console.log('%c🚀 Built by Gol D. Shade', 'font-size: 12px; color: #ff6b6b;');
 
-// ========================================
-// KEYBOARD SHORTCUTS
-// ========================================
-
-// Press 'M' to toggle modal (for testing)
+// Keyboard shortcut: Press 'M' to toggle modal
 document.addEventListener('keydown', function(e) {
     if (e.key === 'm' || e.key === 'M') {
         if (modal.classList.contains('active')) {
             closeModal();
         } else {
-            // Open first project as demo
             const firstProject = document.querySelector('.project-card');
             if (firstProject) {
                 const key = firstProject.dataset.project;
