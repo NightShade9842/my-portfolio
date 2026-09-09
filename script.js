@@ -100,6 +100,36 @@ const projectsData = {
         gitLink: "https://github.com/NightShade9842/sabaody-showcase",
         poster: "images/sabaody-screenshot.jpg"
     },
+    sabaodybot: {
+        title: "SABAODY Bot - Anime RPG on WhatsApp",
+        badge: "⭐ Featured",
+        description: `
+            The most advanced anime RPG game on WhatsApp. 
+            <br><br>
+            <strong>🃏 Anime Cards:</strong> Pull One Piece cards from Mazoku & Shoob. Legendaries, Epics, Shinies.
+            <br>
+            <strong>⚔️ Live Duels:</strong> Real-time card battles. Build your deck. Destroy your rivals.
+            <br>
+            <strong>🐉 Pokémon:</strong> Catch. Train. Evolve. Battle with a full party of 6.
+            <br>
+            <strong>🏴‍☠️ Pirate Crews:</strong> Create a guild. Pick your class — Warrior, Mage, Archer, Summoner, Healer, Rogue, Paladin. Forge weapons. Rule together.
+            <br>
+            <strong>🎰 Casino Island:</strong> Coinflip. Roulette. Slots. War. Hi-Lo. Horse Racing. MASSIVE Jackpot.
+            <br>
+            <strong>💎 Full Economy:</strong> Earn Beli & Gems. Trade cards & Pokémon. Auction rares. Rob the rich. Get rich.
+            <br>
+            <strong>🎯 15+ Mini-Games:</strong> Chess, Connect 4, Tic-Tac-Toe, Battleship, Hangman, Word Chain, Truth or Dare...
+            <br>
+            <strong>🏆 Leaderboards:</strong> Richest. Strongest. Most Legendary cards. Prove YOU are the Pirate King.
+            <br><br>
+            ⚡ 24/7 ONLINE | FREE TO PLAY
+        `,
+        tech: ["Node.js", "WhatsApp API", "Game Logic", "Economy System"],
+        video: "videos/sabaodybot-demo.mp4",
+        liveLink: "https://chat.whatsapp.com/LMlqn66KcQgG2LbDDTNFKF",
+        gitLink: "https://github.com/NightShade9842/sabaodybot-showcase",
+        poster: "images/sabaodybot-screenshot.jpg"
+    },
     duapa: {
         title: "Duapa - Voice-First AI Store Builder",
         badge: "⭐ Featured",
@@ -118,95 +148,36 @@ const projectsData = {
         `,
         tech: ["Node.js", "WhatsApp API", "AI/NLP", "React", "MongoDB", "Express"],
         video: "videos/duapa-demo.mp4",
-        liveLink: "https://duapa.vercel.app/",
+        liveLink: "#",
         gitLink: "https://github.com/NightShade9842/duapa-showcase",
         poster: "images/duapa-screenshot.jpg"
     },
-    chatbot: {
-        title: "AI Chatbot Assistant",
-        badge: "🤖 AI Project",
-        description: `
-            An intelligent chatbot assistant built with Node.js that can handle
-            conversations, answer questions, and perform automated tasks using
-            natural language processing. Features personality support and
-            context-aware responses.
-            <br><br>
-            <strong>💡 Use Cases:</strong> Customer support, personal assistant,
-            task automation, and conversational AI.
-        `,
-        tech: ["Node.js", "JavaScript", "AI APIs", "NLP"],
-        video: "videos/chatbot-demo.mp4",
-        liveLink: "https://your-chatbot-link.vercel.app/",
-        gitLink: "https://github.com/NightShade9842/chatbot-showcase",
-        poster: "images/chatbot-screenshot.jpg"
-    },
-    pokemon: {
-        title: "Pokémon Gaming Bot",
-        badge: "🎮 Game Bot",
-        description: `
-            An interactive gaming bot featuring Pokémon battles, card collection,
-            and anime-themed gameplay. Built for Discord and Telegram platforms
-            with engaging game mechanics and community features.
-            <br><br>
-            <strong>🔥 Features:</strong> Pokémon battles, card collection,
-            anime cards, leaderboards, and community events.
-        `,
-        tech: ["Node.js", "Discord API", "Telegram API", "JavaScript"],
-        video: "videos/pokemon-bot-demo.mp4",
-        liveLink: "https://your-pokemon-bot-link.vercel.app/",
-        gitLink: "https://github.com/NightShade9842/pokemon-bot-showcase",
-        poster: "images/pokemon-bot-screenshot.jpg"
-    },
-    botwebsite: {
-        title: "All-in-One Bot Website",
-        badge: "🌐 Web Project",
-        description: `
-            A central hub showcasing the AI Chatbot and Pokémon Gaming Bot,
-            allowing users to interact with both bots in one place. Features
-            live demos, bot status, user-friendly interface, and real-time updates.
-            <br><br>
-            <strong>✨ Highlights:</strong> Single-page application, responsive design,
-            bot status indicators, and live demo integration.
-        `,
-        tech: ["HTML", "CSS", "JavaScript", "Node.js"],
-        video: "videos/bot-website-demo.mp4",
-        liveLink: "https://your-bot-website-link.vercel.app/",
-        gitLink: "https://github.com/NightShade9842/bot-website-showcase",
-        poster: "images/bot-website-screenshot.jpg"
-    },
-    ecommerce: {
-        title: "E-Commerce Website",
-        badge: "🛒 Full Stack",
-        description: `
-            A fully functional e-commerce platform with product listings,
-            shopping cart, payment gateway integration, and order tracking.
-            Built with modern web technologies for a seamless shopping experience.
-            <br><br>
-            <strong>💳 Features:</strong> Product management, cart functionality,
-            Stripe payment integration, order tracking, and user authentication.
-        `,
-        tech: ["React", "Node.js", "MongoDB", "Stripe", "Express"],
-        video: "videos/ecommerce-demo.mp4",
-        liveLink: "https://your-ecommerce-link.vercel.app/",
-        gitLink: "https://github.com/NightShade9842/ecommerce-showcase",
-        poster: "images/ecommerce-screenshot.jpg"
-    },
-    unity: {
-        title: "Unity Games (Coming Soon)",
+    duskfall: {
+        title: "Duskfall - 3D Zombie Survival Game",
         badge: "🚀 In Development",
         description: `
-            Currently developing immersive games using Unity Engine and C#.
-            Stay tuned for exciting releases including action, adventure,
-            and puzzle games.
+            A 3D zombie survival game built with <strong>Godot 4.7</strong>.
+            Players must survive waves of zombies in a dark, atmospheric world.
             <br><br>
-            <strong>🎯 In Progress:</strong> Game mechanics, level design,
-            character development, and optimization.
+            <strong>🎯 Key Features:</strong>
+            <br>
+            • 3D zombie survival mechanics
+            <br>
+            • Automated APK and EXE builds via GitHub Actions
+            <br>
+            • AI-generated 3D models and textures
+            <br>
+            • Immersive dark atmosphere
+            <br><br>
+            <strong>⚙️ Workflow:</strong> Push to GitHub → GitHub Actions builds APK/EXE automatically
+            <br>
+            <strong>🔄 Current Placeholders:</strong> Player model (test1.glb), Grass textures
         `,
-        tech: ["Unity", "C#", "Game Design"],
-        video: "videos/unity-games-demo.mp4",
+        tech: ["Godot 4.7", "GDScript", "GitHub Actions", "3D Modeling", "Game Design"],
+        video: "videos/duskfall-demo.mp4",
         liveLink: "#",
-        gitLink: "#",
-        poster: "images/unity-games-screenshot.jpg"
+        gitLink: "https://github.com/NightShade9842/duskfall",
+        poster: "images/duskfall-screenshot.jpg"
     }
 };
 
@@ -291,7 +262,6 @@ document.querySelectorAll('.project-card').forEach((card) => {
         if (e.target.closest('.btn-link') || e.target.closest('a')) return;
         // Don't trigger if it's a double-click on media (video toggle)
         if (e.target.closest('.project-media')) {
-            // Check if it was a double-click (handled separately)
             return;
         }
         if (projectKey && projectsData[projectKey]) {
@@ -378,16 +348,8 @@ document.querySelectorAll('.section-header').forEach(header => {
     observer.observe(header);
 });
 
-// Observe robotics and education sections
-document.querySelectorAll('.robotics-content, .education-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
-
-// Observe about content
-document.querySelectorAll('.about-content').forEach(el => {
+// Observe robotics and about sections
+document.querySelectorAll('.robotics-content, .about-content').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -427,12 +389,9 @@ console.log('%chttps://github.com/NightShade9842', 'font-size: 12px; color: #00d
 
 console.log('%c📦 Projects Built:', 'font-size: 14px; font-weight: bold; color: #fff;');
 console.log('  ⭐ SABAODY AI - Pirate-Themed AI Web App');
+console.log('  ⭐ SABAODY Bot - Anime RPG on WhatsApp');
 console.log('  ⭐ Duapa - Voice-First AI Store Builder');
-console.log('  🤖 AI Chatbot Assistant');
-console.log('  🎮 Pokémon Gaming Bot');
-console.log('  🌐 All-in-One Bot Website');
-console.log('  🛒 E-Commerce Website');
-console.log('  🚀 Unity Games (Coming Soon)');
+console.log('  🚀 Duskfall - 3D Zombie Survival Game');
 
 console.log('%c🚀 Built by Gol D. Shade', 'font-size: 12px; color: #ff6b6b;');
 
