@@ -875,7 +875,7 @@ nav .container {
 
 .modal-video-container {
     position: relative;
-    background: #0a0a1a;
+    background: #000;
     border-radius: 24px 24px 0 0;
     overflow: hidden;
 }
@@ -883,9 +883,15 @@ nav .container {
 .modal-video-container video {
     width: 100%;
     height: auto;
-    max-height: 400px;
-    object-fit: cover;
+    max-height: 450px;
+    object-fit: contain;
+    background: #000;
     display: block;
+}
+
+.modal-video-container video:fullscreen {
+    max-height: 100vh;
+    object-fit: contain;
 }
 
 /* ========================================
@@ -966,6 +972,7 @@ nav .container {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    cursor: zoom-in;
 }
 
 .swiper-button-next,
@@ -1072,6 +1079,108 @@ nav .container {
 .modal-content::-webkit-scrollbar-thumb {
     background: var(--primary);
     border-radius: 10px;
+}
+
+/* ========================================
+   IMAGE LIGHTBOX
+   ======================================== */
+
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-overlay img {
+    max-width: 95%;
+    max-height: 95vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 107, 107, 0.3);
+    transform: rotate(90deg);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.lightbox-prev {
+    left: 30px;
+}
+
+.lightbox-next {
+    right: 30px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(108, 99, 255, 0.5);
+    transform: translateY(-50%) scale(1.1);
 }
 
 /* ========================================
@@ -1292,6 +1401,29 @@ footer p i.fa-code {
         height: 36px;
         font-size: 1rem;
     }
+
+    /* Lightbox Mobile */
+    .lightbox-overlay {
+        padding: 15px;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
 }
 
 @media (max-width: 480px) {
@@ -1329,5 +1461,10 @@ footer p i.fa-code {
 
     .project-card {
         padding: 20px 16px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        display: none;
     }
 }
