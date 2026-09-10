@@ -62,8 +62,8 @@
                             <span class="stat-label">Products Built</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Live Products</span>
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Projects Shipped</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">2</span>
@@ -105,7 +105,7 @@
                         I'm <strong>Freduah Dominic Kwakye</strong> — a software developer, game creator, and AI enthusiast who builds technology that solves real problems.
                     </p>
                     <p>
-                        I've built <strong>SABAODY AI</strong>, a pirate-themed AI web app with 12+ features including AI chat, image generation, video creation, text-to-speech, weather, lyrics, translation, and more. I created <strong>SABAODY Bot</strong>, the most advanced anime RPG game on WhatsApp with card wars, live duels, a full economy, 15+ mini-games, and a casino.
+                        I've built <strong>SABAODY AI</strong>, a pirate-themed AI web app with 12+ features including AI chat, image generation, video creation, text-to-speech, weather, lyrics, translation, and more. I created <strong>SABAODY RPG</strong>, the most advanced anime RPG game on WhatsApp with card wars, live duels, a full economy, 15+ mini-games, and a marketplace website.
                     </p>
                     <p>
                         I built <strong>Duapa</strong>, a voice-first AI store builder for Ghanaian micro-sellers. Sellers create online stores by talking to a WhatsApp assistant in local languages like Twi, Ga, and Hausa. It solves a real problem — <strong>80% of Ghanaian micro-sellers have no digital storefront</strong>.
@@ -149,7 +149,7 @@
             </div>
             <div class="project-grid">
 
-                <!-- PROJECT 1: SABAODY AI -->
+                <!-- ============ PROJECT 1: SABAODY AI ============ -->
                 <div class="project-card" data-project="sabaody">
                     <div class="project-logo">
                         <img src="images/sabaody-logo.png" alt="SABAODY AI" />
@@ -174,31 +174,31 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 2: SABAODY BOT -->
-                <div class="project-card" data-project="sabaodybot">
+                <!-- ============ PROJECT 2: SABAODY RPG (Bot + Website) ============ -->
+                <div class="project-card" data-project="sabaodyrpg">
                     <div class="project-logo">
-                        <img src="images/sabaodybot-logo.png" alt="SABAODY Bot" />
+                        <img src="images/sabaodybot-logo.png" alt="SABAODY RPG" />
                     </div>
                     <div class="project-info">
                         <div class="project-badge">⭐ Featured</div>
-                        <h3>SABAODY Bot</h3>
+                        <h3>SABAODY RPG</h3>
                         <p class="project-desc">
-                            The most advanced anime RPG game on WhatsApp. Card wars, live duels,
-                            Pokémon, casino, 15+ mini-games, full economy, and pirate crews.
+                            The most advanced anime RPG game on WhatsApp plus a full marketplace
+                            website. Card wars, live duels, Pokémon, casino, 15+ mini-games, and auction house.
                         </p>
                         <div class="project-tech">
                             <span>Node.js</span>
                             <span>WhatsApp API</span>
                             <span>Game Logic</span>
-                            <span>Economy System</span>
+                            <span>Marketplace</span>
                         </div>
-                        <button class="btn btn-primary view-project-btn" data-project="sabaodybot">
+                        <button class="btn btn-primary view-project-btn" data-project="sabaodyrpg">
                             <i class="fas fa-eye"></i> View Project
                         </button>
                     </div>
                 </div>
 
-                <!-- PROJECT 3: DUAPA -->
+                <!-- ============ PROJECT 3: DUAPA (Bot + Website) ============ -->
                 <div class="project-card" data-project="duapa">
                     <div class="project-logo">
                         <img src="images/duapa-logo.png" alt="Duapa" />
@@ -223,7 +223,7 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 4: DUSKFALL -->
+                <!-- ============ PROJECT 4: DUSKFALL ============ -->
                 <div class="project-card" data-project="duskfall">
                     <div class="project-logo">
                         <img src="images/duskfall-logo.png" alt="Duskfall" />
@@ -364,6 +364,11 @@
                     </video>
                 </div>
 
+                <!-- Tab Buttons (only show if project has tabs) -->
+                <div class="modal-tabs" id="modalTabs">
+                    <!-- Buttons will be inserted by JavaScript -->
+                </div>
+
                 <!-- Slideshow Section -->
                 <div class="modal-slideshow">
                     <div class="swiper mySwiper">
@@ -390,7 +395,7 @@
                         <span>React</span>
                         <span>MongoDB</span>
                     </div>
-                    <div class="modal-links">
+                    <div class="modal-links" id="modalLinks">
                         <a href="#" class="btn btn-primary" id="modalLiveLink" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Visit Project
                         </a>
