@@ -207,15 +207,15 @@
                         <div class="project-badge">⭐ Featured</div>
                         <h3>Duapa</h3>
                         <p class="project-desc">
-                            Voice-first AI store builder & social commerce platform for Ghanaian micro-sellers.
-                            Sellers create stores by talking to a WhatsApp assistant in local languages.
+                            Voice-first AI store builder for Ghana's informal micro-sellers.
+                            Create a store by talking to WhatsApp in Twi, Ga, Hausa, Ewe, or English — in under 60 seconds.
                         </p>
                         <div class="project-tech">
                             <span>Node.js</span>
                             <span>WhatsApp API</span>
                             <span>AI/NLP</span>
                             <span>React</span>
-                            <span>MongoDB</span>
+                            <span>MySQL</span>
                         </div>
                         <button class="btn btn-primary view-project-btn" data-project="duapa">
                             <i class="fas fa-eye"></i> View Project
@@ -358,7 +358,7 @@
 
                 <!-- Video Section -->
                 <div class="modal-video-container">
-                    <video id="modalVideo" controls poster="images/placeholder-poster.jpg">
+                    <video id="modalVideo" controls playsinline controlsList="nodownload" poster="images/placeholder-poster.jpg">
                         <source src="" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
@@ -407,6 +407,20 @@
 
             </div>
         </div>
+    </div>
+
+    <!-- ===================== IMAGE LIGHTBOX ===================== -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" id="lightboxPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <img src="" alt="Full view" id="lightboxImg" />
+        <button class="lightbox-next" id="lightboxNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
     </div>
 
     <!-- ===================== JAVASCRIPT ===================== -->
