@@ -81,8 +81,8 @@ const projectsData = {
         tech: ["Node.js", "WhatsApp API", "Game Logic", "Marketplace"],
         video: "videos/sabaodyrpg-demo.mp4",
         links: [
-            { text: "Visit Bot", icon: "fab fa-whatsapp", url: "https://chat.whatsapp.com/LMlqn66KcQgG2LbDDTNFKF", class: "btn-primary" },
-            { text: "Visit Website", icon: "fas fa-globe", url: "#", class: "btn-outline" } // placeholder
+            { text: "Join WhatsApp Crew", icon: "fab fa-whatsapp", url: "https://chat.whatsapp.com/Hanm4DeLXxz62gRNB9w28v", class: "btn-primary" },
+            { text: "Visit Website", icon: "fas fa-globe", url: "https://sabaody-web-static.vercel.app/", class: "btn-outline" }
         ],
         tabs: [
             {
@@ -108,26 +108,35 @@ const projectsData = {
 
     // PROJECT 3: DUAPA (Bot + Website)
     duapa: {
-        title: "Duapa - Voice-First AI Store Builder",
+        title: "Duapa - Voice-First AI Store Builder & Social Commerce Platform",
         badge: "⭐ Featured",
         description: `
-            Duapa is a voice-first AI store builder and social commerce platform
-            for Ghana's micro-sellers. Sellers create online stores by talking to
-            a WhatsApp assistant in Twi, Ga, Hausa, Ewe, or English. They upload
-            products with photos and TikTok-style reels, set their MoMo number,
-            and share a live store link. Buyers browse the store, see the seller's
-            verified MoMo details, and pay manually with a transaction ID to confirm.
+            Duapa by <strong>GrandLine Fleet</strong> is a voice-first AI store builder and social commerce platform
+            that enables Ghana's informal micro-sellers to create online stores via WhatsApp using voice or text
+            in <strong>Twi, Ga, Hausa, Ewe, or English</strong>.
             <br><br>
-            <strong>🚀 Problem Solved:</strong> 80% of Ghanaian micro-sellers are informal
-            and have no digital storefront. Duapa gives them one by simply speaking.
+            Sellers upload product photos and short video reels, set their MoMo number and name, and share a
+            live store link. Buyers browse the store, see verified payment details, and pay manually via mobile
+            money with transaction ID confirmation.
             <br><br>
-            <strong>👥 Team:</strong> Built with GrandLine Fleet.
+            <strong>🚀 Problem Solved:</strong> Over 80% of Ghanaian micro-sellers — market women, tailors,
+            food vendors, phone repairers — run their businesses informally through WhatsApp with no digital
+            storefront, no verified payment details, and no trust system. Duapa turns any WhatsApp seller into
+            a digital business in <strong>under 60 seconds</strong>.
+            <br><br>
+            <strong>⚡ Live Now:</strong> Working WhatsApp bot, live website with dashboard, backend API,
+            and manual payment flow tested end-to-end.
+            <br><br>
+            <strong>💰 Business Model:</strong> 1.5% transaction fee, premium subscriptions, featured listings.
+            <br>
+            <strong>🎯 The Ask:</strong> $1,000 and 6 months of mentorship to onboard 100 pilot sellers and
+            prepare for a seed round.
         `,
-        tech: ["Node.js", "WhatsApp API", "AI/NLP", "React", "MongoDB", "Express"],
+        tech: ["Node.js", "WhatsApp API", "AI/NLP", "React", "MySQL", "Express", "Vercel"],
         video: "videos/duapa-demo.mp4",
         links: [
-            { text: "Visit Bot", icon: "fab fa-whatsapp", url: "#", class: "btn-primary" },
-            { text: "Visit Website", icon: "fas fa-globe", url: "#", class: "btn-outline" }
+            { text: "Visit Website", icon: "fas fa-globe", url: "https://duapa-theta.vercel.app", class: "btn-primary" },
+            { text: "WhatsApp Bot", icon: "fab fa-whatsapp", url: "https://wa.me/233560806367", class: "btn-outline" }
         ],
         tabs: [
             {
@@ -153,33 +162,85 @@ const projectsData = {
 
     // PROJECT 4: DUSKFALL
     duskfall: {
-        title: "Duskfall - 3D Zombie Survival Game",
+        title: "Duskfall - Open-World Zombie Survival RPG",
         badge: "🚀 In Development",
         description: `
-            A 3D zombie survival game built with <strong>Godot 4.7</strong>.
-            Players must survive waves of zombies in a dark, atmospheric world.
+            <strong>Survive the outbreak. Rule the ruins. Become the legend of the new world.</strong>
             <br><br>
-            <strong>🎯 Key Features:</strong>
-            <br>
-            • 3D zombie survival mechanics
-            <br>
-            • Automated APK and EXE builds via GitHub Actions
-            <br>
-            • AI-generated 3D models and textures
-            <br>
-            • Immersive dark atmosphere
+            Duskfall is an open-world zombie survival RPG that blends the freedom of <strong>GTA</strong>,
+            the depth of <strong>Red Dead Redemption</strong>, and the intensity of <strong>The Last of Us</strong> —
+            all set in a richly detailed African-inspired city fighting to survive the apocalypse.
             <br><br>
-            <strong>⚙️ Workflow:</strong> Push to GitHub → GitHub Actions builds APK/EXE automatically
+            Built with <strong>Godot 4.7</strong> and developed entirely through GitHub with automated
+            builds for <strong>Android (APK)</strong> and <strong>Windows (EXE)</strong>.
+            <br><br>
+            <strong>🌍 The World — Kumaso City</strong><br>
+            A fictional African metropolis inspired by Kumasi, Accra, and Lagos with four distinct zones:
+            <br>
+            🟢 <strong>Green Zone</strong> — Military safe zone (Low danger)
+            <br>
+            🟡 <strong>Yellow Zone</strong> — Suburbs, looters, gangs (Medium)
+            <br>
+            🔴 <strong>Red Zone</strong> — City center, full infestation (High)
+            <br>
+            ⚫ <strong>Dark Zone</strong> — Night becomes a nightmare (Extreme)
+            <br><br>
+            <strong>🧟 Zombie Types:</strong> Walker, Screamer, Jumper, Tank, and Former Player
+            (when you die online, your character becomes a zombie with your loot)
+            <br><br>
+            <strong>🎯 Core Features:</strong>
+            <br>
+            • GTA-style open world with vehicles (cars, motorcycles, helicopters, boats)
+            <br>
+            • Smart NPC AI with 100+ unique characters, daily schedules, and RDR2-style interactions
+            <br>
+            • Survival systems — hunger, thirst, sleep, body stats, temperature, infection
+            <br>
+            • Weapon wheel with attachments, melee combat, ammo types, concealment
+            <br>
+            • In-game phone — contacts, messages, social media, banking, missions
+            <br>
+            • Safe houses, customization, barbershops, weapon storage
+            <br>
+            • Activities — gym, shooting range, street racing, fishing, nightclubs
+            <br><br>
+            <strong>⚙️ Technical:</strong> Godot 4.7 (mobile renderer) • GDScript • GitHub Actions
+            (automated APK on every push) • AI-generated 3D models and PBR textures
+            <br><br>
+            <strong>🔮 Roadmap:</strong>
+            <br>
+            ✅ Phase 1 — Core foundation (player movement, zombie AI, safe island, mobile controls)
+            <br>
+            🔜 Phase 2 — Full city map, vehicles, weapon wheel, police heat system
+            <br>
+            🔜 Phase 3 — NPC relationships, factions, base building, multiplayer
+            <br>
+            🔜 Phase 4 — Dynamic weather, radio stations, photo mode, community challenges
         `,
         tech: ["Godot 4.7", "GDScript", "GitHub Actions", "3D Modeling", "Game Design"],
         video: "videos/duskfall-demo.mp4",
         links: [
-            { text: "View GitHub", icon: "fab fa-github", url: "https://github.com/NightShade9842/duskfall", class: "btn-primary" }
+            { text: "View on GitHub", icon: "fab fa-github", url: "https://github.com/NightShade9842/duskfall", class: "btn-primary" }
         ],
-        screenshots: [
-            "images/duskfall-ss1.jpg",
-            "images/duskfall-ss2.jpg",
-            "images/duskfall-ss3.jpg"
+        tabs: [
+            {
+                name: "Gameplay",
+                icon: "fas fa-gamepad",
+                screenshots: [
+                    "images/duskfall-ss1.jpg",
+                    "images/duskfall-ss2.jpg",
+                    "images/duskfall-ss3.jpg"
+                ]
+            },
+            {
+                name: "Zones",
+                icon: "fas fa-map-marked-alt",
+                screenshots: [
+                    "images/duskfall-ss4.jpg",
+                    "images/duskfall-ss5.jpg",
+                    "images/duskfall-ss6.jpg"
+                ]
+            }
         ]
     }
 };
@@ -199,29 +260,24 @@ const modalLinks = document.getElementById('modalLinks');
 const modalTabs = document.getElementById('modalTabs');
 const slideshowWrapper = document.getElementById('slideshowWrapper');
 let swiperInstance = null;
-let currentScreenshots = [];
 
 // Helper: Render slideshow for given screenshots
 function renderSlideshow(screenshots) {
     slideshowWrapper.innerHTML = '';
-    currentScreenshots = screenshots || [];
-
-    if (!currentScreenshots.length) {
-        // If no screenshots, hide slideshow container or show a placeholder
+    if (!screenshots || screenshots.length === 0) {
         document.querySelector('.modal-slideshow').style.display = 'none';
         return;
     } else {
         document.querySelector('.modal-slideshow').style.display = 'block';
     }
 
-    currentScreenshots.forEach(src => {
+    screenshots.forEach(src => {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
         slide.innerHTML = `<img src="${src}" alt="Screenshot" />`;
         slideshowWrapper.appendChild(slide);
     });
 
-    // Initialize Swiper after a short delay
     setTimeout(() => {
         if (swiperInstance) {
             swiperInstance.destroy(true, true);
@@ -249,14 +305,12 @@ function renderTabs(project) {
     modalTabs.innerHTML = '';
 
     if (!project.tabs || project.tabs.length === 0) {
-        // No tabs: hide tab container
         modalTabs.style.display = 'none';
         return;
     }
 
     modalTabs.style.display = 'flex';
 
-    // Create tab buttons
     project.tabs.forEach((tab, index) => {
         const btn = document.createElement('button');
         btn.className = `tab-btn ${index === 0 ? 'active' : ''}`;
@@ -264,11 +318,8 @@ function renderTabs(project) {
         btn.dataset.index = index;
 
         btn.addEventListener('click', () => {
-            // Update active class
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            // Update slideshow
             const selectedTab = project.tabs[index];
             renderSlideshow(selectedTab.screenshots);
         });
@@ -316,22 +367,13 @@ function openModal(projectKey) {
         modalVideo.style.display = 'none';
     }
 
-    // Set title
     modalTitle.textContent = project.title;
-
-    // Set badge
     modalBadge.textContent = project.badge;
-
-    // Set description
     modalDescription.innerHTML = project.description;
-
-    // Set tech stack
     modalTech.innerHTML = project.tech.map(t => `<span>${t}</span>`).join('');
 
-    // Render links
     renderLinks(project);
 
-    // Render tabs & slideshow
     if (project.tabs && project.tabs.length > 0) {
         renderTabs(project);
     } else {
@@ -340,11 +382,9 @@ function openModal(projectKey) {
         renderSlideshow(project.screenshots);
     }
 
-    // Show modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Reset video
     modalVideo.pause();
     modalVideo.currentTime = 0;
 }
@@ -376,10 +416,9 @@ document.querySelectorAll('.view-project-btn').forEach(btn => {
     });
 });
 
-// Click on card (anywhere) opens modal
+// Click on card opens modal
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', function(e) {
-        // Don't trigger if clicking on the button (already handled)
         if (e.target.closest('.view-project-btn')) return;
         const projectKey = this.dataset.project;
         if (projectKey && projectsData[projectKey]) {
@@ -463,6 +502,77 @@ if (subtitle) {
 }
 
 // ========================================
+// IMAGE LIGHTBOX
+// ========================================
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+
+let currentImageIndex = 0;
+let currentImageList = [];
+
+function openLightbox(imageSrc, imageList) {
+    currentImageList = imageList || [imageSrc];
+    currentImageIndex = currentImageList.indexOf(imageSrc);
+    if (currentImageIndex === -1) currentImageIndex = 0;
+
+    lightboxImg.src = currentImageList[currentImageIndex];
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % currentImageList.length;
+    lightboxImg.src = currentImageList[currentImageIndex];
+}
+
+function showPrevImage() {
+    currentImageIndex = (currentImageIndex - 1 + currentImageList.length) % currentImageList.length;
+    lightboxImg.src = currentImageList[currentImageIndex];
+}
+
+if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+}
+
+if (lightboxNext) {
+    lightboxNext.addEventListener('click', showNextImage);
+}
+
+if (lightboxPrev) {
+    lightboxPrev.addEventListener('click', showPrevImage);
+}
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') showNextImage();
+    if (e.key === 'ArrowLeft') showPrevImage();
+});
+
+// Attach click handler to slideshow images
+document.addEventListener('click', function(e) {
+    const img = e.target.closest('.modal-slideshow .swiper-slide img');
+    if (img && img.src) {
+        const allImages = Array.from(document.querySelectorAll('.modal-slideshow .swiper-slide img'))
+            .map(i => i.src);
+        openLightbox(img.src, allImages);
+    }
+});
+
+// ========================================
 // CONSOLE BANNER
 // ========================================
 
@@ -474,7 +584,7 @@ console.log('%c📦 Projects Built:', 'font-size: 14px; font-weight: bold; color
 console.log('  ⭐ SABAODY AI - Pirate-Themed AI Web App');
 console.log('  ⭐ SABAODY RPG - Anime RPG + Marketplace');
 console.log('  ⭐ Duapa - Voice-First AI Store Builder');
-console.log('  🚀 Duskfall - 3D Zombie Survival Game');
+console.log('  🚀 Duskfall - Open-World Zombie Survival RPG');
 
 console.log('%c🚀 Built by Gol D. Shade', 'font-size: 12px; color: #ff6b6b;');
 
